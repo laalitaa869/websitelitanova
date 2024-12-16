@@ -1,0 +1,214 @@
+/* Reset dasar untuk memastikan konsistensi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styling untuk body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f3f4f6; /* Latar belakang pastel jika gambar tidak dimuat */
+    background-image: url('profil.jpg'); /* Ganti dengan nama file gambar latar belakang */
+    background-size: cover; /* Agar gambar menutupi seluruh area */
+    background-position: center center; /* Menempatkan gambar di tengah */
+    background-attachment: fixed; /* Menjaga gambar latar belakang tetap ketika scroll */
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+}
+
+/* Menambahkan overlay untuk efek samar */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Efek transparansi putih di atas gambar */
+    z-index: -1; /* Menempatkan overlay di belakang konten */
+}
+
+/* Header */
+header {
+    background-color: rgba(255, 179, 179, 0.8); /* Latar belakang peach transparan */
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid #ff8c8c; /* Aksen border peach gelap */
+}
+
+header h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Menu Navigasi */
+nav ul {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff5722; /* Warna merah-oranye untuk hover */
+}
+
+/* Foto Profil */
+.profile-img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
+}
+
+/* Section Intro */
+.intro-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Styling untuk section */
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Judul */
+h2 {
+    font-size: 2rem;
+    color: #ff5722; /* Warna oranye menyala */
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Styling untuk langkah-langkah */
+.step {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.8); /* Latar belakang putih dengan transparansi */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan lembut pada langkah */
+}
+
+.step-img img {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.step-text ol {
+    margin-left: 0;
+}
+
+.step-text li {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .step {
+        flex-direction: column; /* Menyusun langkah secara vertikal */
+        align-items: flex-start;
+    }
+
+    .step-img img {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 60px;
+    border-top: 4px solid #ff5722; /* Aksen warna oranye pada footer */
+}
+
+footer p {
+    font-size: 1rem;
+    color: #ddd;
+}
+
+/* Styling untuk Bahan-bahan */
+ul, ol {
+    margin-left: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+/* Tombol */
+button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #ff9800;
+}
+
+/* Styling untuk Links */
+a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9800;
+}
